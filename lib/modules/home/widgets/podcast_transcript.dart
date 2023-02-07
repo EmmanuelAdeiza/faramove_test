@@ -18,6 +18,8 @@ class PodcastTranscript extends StatelessWidget {
   Widget build(BuildContext context) {
     return SlidingUpPanel(
       renderPanelSheet: false,
+      backdropEnabled: true,
+      backdropColor: AppColors.blue.withOpacity(0.5),
       minHeight: 90,
       color: AppColors.blue,
       borderRadius: const BorderRadius.only(
@@ -82,7 +84,7 @@ Widget _floatingCollapsed() {
 
 Widget _floatingPanel() {
   return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+    padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
     decoration: BoxDecoration(
         color: AppColors.blue,
         borderRadius: const BorderRadius.all(Radius.circular(10.0)),

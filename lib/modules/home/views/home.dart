@@ -48,44 +48,46 @@ class Home extends StatelessWidget {
                 ),
               ],
             ),
-            Column(
-              children: [
-                RectCard(
-                    onTap: () => context.navigateTo(const AccountRoute()),
-                    backgroundColor: AppColors.lightBlue,
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          const IconAssets().caution,
-                          width: 40.w,
-                        ),
-                        const XSpace(10),
-                        const CustomMultilineText(
-                          'Go to your profile to complete registration',
-                          size: AppTextSize.smallText,
-                          weight: FontWeight.w500,
-                        )
-                      ],
-                    )),
-                const YSpace(15),
-                const QuickActions(),
-                const YSpace(10),
-                const XDivider(thickness: 8),
-                SlideInLeft(
-                  child: RectCard(
-                    child: const CustomText(
-                      'Upcoming Session (0)',
-                      size: AppTextSize.title,
-                      weight: FontWeight.w700,
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  RectCard(
+                      onTap: () => context.navigateTo(const AccountRoute()),
+                      backgroundColor: AppColors.lightBlue,
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            const IconAssets().caution,
+                            width: 40.w,
+                          ),
+                          const XSpace(10),
+                          const CustomMultilineText(
+                            'Go to your profile to complete registration',
+                            size: AppTextSize.smallText,
+                            weight: FontWeight.w500,
+                          )
+                        ],
+                      )),
+                  const YSpace(15),
+                  const QuickActions(),
+                  const YSpace(10),
+                  const XDivider(thickness: 8),
+                  SlideInLeft(
+                    child: RectCard(
+                      child: const CustomText(
+                        'Upcoming Session (0)',
+                        size: AppTextSize.title,
+                        weight: FontWeight.w700,
+                      ),
+                      onTap: () =>
+                          context.navigateTo(const PodcastPlayingRoute()),
                     ),
-                    onTap: () =>
-                        context.navigateTo(const PodcastPlayingRoute()),
                   ),
-                ),
-                const XDivider(thickness: 8),
-                const TipsToStayHealthy(),
-                const YSpace(30),
-              ],
+                  const XDivider(thickness: 8),
+                  const TipsToStayHealthy(),
+                  const YSpace(30),
+                ],
+              ),
             ),
             const YSpace(8),
           ],
