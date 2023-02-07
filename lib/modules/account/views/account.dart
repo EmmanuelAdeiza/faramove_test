@@ -16,7 +16,7 @@ class Account extends StatelessWidget {
           children: [
             Lottie.asset(const AnimationAssets().empty2),
             const YSpace(50),
-            const CustomText('Accounts',
+            const CustomText('Account',
                 size: AppTextSize.title, weight: FontWeight.w600)
           ],
         ),

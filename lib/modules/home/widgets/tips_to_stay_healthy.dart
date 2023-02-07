@@ -4,6 +4,7 @@ import 'package:faramove_test/global/global.dart';
 import 'package:faramove_test/modules/home/widgets/rect_card.dart';
 import 'package:faramove_test/modules/home/widgets/tip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TipsToStayHealthy extends StatelessWidget {
   const TipsToStayHealthy({
@@ -33,11 +34,12 @@ class TipsToStayHealthy extends StatelessWidget {
                   )
                 ],
               )),
+          const YSpace(10),
           SizedBox(
             height: 150,
             child: ListView(
               shrinkWrap: true,
-              padding: EdgeInsets.zero,
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
               scrollDirection: Axis.horizontal,
               children: [
                 TipCard(

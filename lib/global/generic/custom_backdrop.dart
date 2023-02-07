@@ -24,10 +24,10 @@ class CustomBackdrop extends StatelessWidget {
             Positioned.fill(
                 left: 20.w,
                 right: 15.w,
-                top: -100.h,
+                top: -500.h,
                 child: Image.asset(const BgAssets().confetti)),
             BackdropFilter(
-              filter: filter ?? ImageFilter.blur(sigmaX: 3, sigmaY: 3),
+              filter: filter ?? ImageFilter.blur(sigmaX: 5, sigmaY: 5),
               child: child,
             )
           ],

@@ -17,6 +17,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.white,
       body: SingleChildScrollView(
+        primary: false,
         child: Column(
           children: [
             const YSpace(67),

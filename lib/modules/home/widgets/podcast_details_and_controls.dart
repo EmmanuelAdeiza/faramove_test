@@ -15,6 +15,22 @@ class PodcastDetailsAndControl extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                CustomText('10 reasons',
+                    size: AppTextSize.title, weight: FontWeight.bold),
+                CustomText('Stay Inspired- Episode 1',
+                    size: AppTextSize.subHeader, color: AppColors.grey3),
+              ],
+            ),
+            SvgPicture.asset(const IconAssets().volume, width: 24.sp),
+          ],
+        ),
+        const YSpace(20),
         ProgressBar(
           progress: const Duration(minutes: 1, seconds: 53),
           buffered: const Duration(milliseconds: 500),
@@ -44,6 +60,7 @@ class PodcastDetailsAndControl extends StatelessWidget {
             const CustomText('1x',
                 size: AppTextSize.title, weight: FontWeight.bold),
             Row(
+
               children: [
                 SvgPicture.asset(const IconAssets().skipBackward, width: 28.sp),
                 const XSpace(5),
@@ -52,7 +69,7 @@ class PodcastDetailsAndControl extends StatelessWidget {
                 SvgPicture.asset(const IconAssets().skipForward, width: 28.sp),
               ],
             ),
-            const XSpace(0),
+            const XSpace(20),
           ],
         ),
       ],
