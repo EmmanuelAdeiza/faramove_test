@@ -31,7 +31,7 @@ class Community extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: ListView.builder(
-                  padding: EdgeInsets.zero,
+                  padding: EdgeInsets.only(bottom: 40.h),
                   itemCount: communities.length,
                   itemBuilder: ((context, index) {
                     CommunityModel community = communities[index];

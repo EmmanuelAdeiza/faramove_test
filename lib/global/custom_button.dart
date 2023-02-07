@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:faramove_test/core/utilities/colors.dart';
-import 'package:faramove_test/global/alternate_display.dart';
+import 'package:faramove_test/global/generic/alternate_display.dart';
 import 'package:faramove_test/global/box_sizing.dart';
 import 'package:faramove_test/global/custom_text.dart';
 import 'package:flutter/material.dart';

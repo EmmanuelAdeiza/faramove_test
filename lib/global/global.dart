@@ -1,4 +1,4 @@
-export 'alternate_display.dart';
+export 'generic/alternate_display.dart';
 export 'app_text_styles.dart';
 export 'avatar.dart';
 export 'box_sizing.dart';
