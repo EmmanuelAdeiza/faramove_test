@@ -82,6 +82,7 @@ Widget _floatingCollapsed() {
 
 Widget _floatingPanel() {
   return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
     decoration: BoxDecoration(
         color: AppColors.blue,
         borderRadius: const BorderRadius.all(Radius.circular(10.0)),
