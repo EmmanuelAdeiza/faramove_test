@@ -19,6 +19,7 @@ class RouteMainScreen extends StatelessWidget {
         builder: (context, child, animation) {
           final tabsRouter = AutoTabsRouter.of(context);
           return Scaffold(
+              extendBody: true,
               bottomNavigationBar: CustomBottomNav(tabsRouter: tabsRouter),
               body: FadeTransition(
                 opacity: animation,

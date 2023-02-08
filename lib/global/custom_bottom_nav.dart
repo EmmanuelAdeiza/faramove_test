@@ -18,7 +18,8 @@ class CustomBottomNav extends StatelessWidget {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       landscapeLayout: BottomNavigationBarLandscapeLayout.spread,
-      // backgroundColor: Colors.transparent,
+      backgroundColor: AppColors.white.withOpacity(.9),
+      elevation: 0,
       items: [
         BottomNavigationBarItem(
             icon: Padding(
