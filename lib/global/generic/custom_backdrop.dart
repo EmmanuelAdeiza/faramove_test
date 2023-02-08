@@ -27,9 +27,8 @@ class CustomBackdrop extends StatelessWidget {
                 top: -500.h,
                 child: Image.asset(const BgAssets().confetti)),
             BackdropFilter(
-              filter: filter ?? ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-              child: child,
-            )
+                filter: filter ?? ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                child: child)
           ],
         ));
   }
