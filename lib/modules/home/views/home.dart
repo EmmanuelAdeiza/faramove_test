@@ -16,40 +16,40 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white,
-      body: SingleChildScrollView(
-        primary: false,
-        child: Column(
-          children: [
-            const YSpace(67),
-            CustomTopBar(
-              title: Row(
-                children: [
-                  CustomTapDetector(
-                      onTap: () => context.navigateTo(const AccountRoute()),
-                      child:
-                          Image.asset(const ImageAssets().avatar, width: 40.w)),
-                  const XSpace(10),
-                  const CustomText(
-                    "Hi, Sarah",
-                    size: 20,
-                    weight: FontWeight.w600,
-                    animate: true,
-                  ),
-                ],
-              ),
-              actions: [
-                SvgPicture.asset(
-                  const IconAssets().message,
-                  width: 35.w,
-                ),
-                const XSpace(5),
-                SvgPicture.asset(
-                  const IconAssets().notification,
-                  width: 35.w,
+      body: Column(
+        children: [
+          const YSpace(67),
+          CustomTopBar(
+            title: Row(
+              children: [
+                CustomTapDetector(
+                    onTap: () => context.navigateTo(const AccountRoute()),
+                    child:
+                        Image.asset(const ImageAssets().avatar, width: 40.w)),
+                const XSpace(10),
+                const CustomText(
+                  "Hi, Sarah",
+                  size: 20,
+                  weight: FontWeight.w600,
+                  animate: true,
                 ),
               ],
             ),
-            SingleChildScrollView(
+            actions: [
+              SvgPicture.asset(
+                const IconAssets().message,
+                width: 35.w,
+              ),
+              const XSpace(5),
+              SvgPicture.asset(
+                const IconAssets().notification,
+                width: 35.w,
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 608.h,
+            child: SingleChildScrollView(
               child: Column(
                 children: [
                   RectCard(
@@ -90,9 +90,8 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
-            const YSpace(8),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
